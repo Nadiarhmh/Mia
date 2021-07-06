@@ -40,14 +40,14 @@ $('document').ready(function () {
 		$('body').css('backgroud-color', '#FFF');
 		$('body').addClass('peach-after');
 		$(this).fadeOut('slow').delay(6000).promise().done(function () {
-			$('#bannar_coming').fadeIn('slow');
+			$('#balloons_flying').fadeIn('slow');
 		});
 	});
 
-	$('#bannar_coming').click(function () {
-		$('.bannar').addClass('bannar-come');
+	$('#balloons_flying').click(function () {
+		// $('.bannar').addClass('bannar-come');
 		$(this).fadeOut('slow').delay(6000).promise().done(function () {
-			$('#balloons_flying').fadeIn('slow');
+			$('#cake_fadein').fadeIn('slow');
 		});
 	});
 
@@ -103,7 +103,7 @@ $('document').ready(function () {
 	}
 
 	$('#balloons_flying').click(function () {
-		$('.balloon-border').animate({ top: -500 }, 8000);
+		$('.balloon-border').animate({ top: -250 }, 8000);
 		$('#b1,#b4,#b5,#b7').addClass('balloons-rotate-behaviour-one');
 		$('#b2,#b3,#b6').addClass('balloons-rotate-behaviour-two');
 		// $('#b3').addClass('balloons-rotate-behaviour-two');
@@ -152,12 +152,12 @@ $('document').ready(function () {
 		$('#b7').attr('id', 'b77')
 		$('#b11').animate({ top: 240, left: vw - 350 }, 500);
 		$('#b22').animate({ top: 240, left: vw - 250 }, 500);
-		$('#b33').animate({ top: 240, left: vw - 150 }, 500);
-		$('#b44').animate({ top: 240, left: vw - 50 }, 500);
-		$('#b55').animate({ top: 240, left: vw + 50 }, 500);
+		$('#b33').animate({ top: 80, left: vw - 150 }, 500);
+		$('#b44').animate({ top: 80, left: vw - 50 }, 500);
+		$('#b55').animate({ top: 80, left: vw + 50 }, 500);
 		$('#b66').animate({ top: 240, left: vw + 150 }, 500);
 		$('#b77').animate({ top: 240, left: vw + 250 }, 500);
-		$('.balloons').css('opacity', '0.9');
+		$('.balloons').css('opacity', '5.9');
 		$('.balloons h2').fadeIn(3000);
 		$(this).fadeOut('slow').delay(5000).promise().done(function () {
 			$('#story').fadeIn('slow');
@@ -175,7 +175,7 @@ $('document').ready(function () {
 		function msgLoop(i) {
 			$("p:nth-child(" + i + ")").fadeOut('slow').delay(1000).promise().done(function () {
 				i = i + 1;
-				$("p:nth-child(" + i + ")").fadeIn('slow').delay(1000);
+				$("p:nth-child(" + i + ")").fadeIn(3500).delay(1000);
 				if (i == 50) {
 					$("p:nth-child(49)").fadeOut('slow').promise().done(function () {
 						$('.cake').fadeIn('fast');
